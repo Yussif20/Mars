@@ -132,7 +132,7 @@ export const CountrySelector = () => {
       </div>
 
       {/* Country Cards */}
-      <div className="w-full grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-20 place-items-center">
+      <div className="w-full grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-20 gap-y-10 place-items-center">
         {countryData[selectedTab].map((country, index) => (
           <Link
             to="/"

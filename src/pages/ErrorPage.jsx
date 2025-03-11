@@ -1,3 +1,3 @@
 export const ErrorPage = () => {
-  return <section>Page Not found</section>;
+  return <section>Coming soon...</section>;
 };
