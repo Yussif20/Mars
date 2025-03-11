@@ -14,42 +14,42 @@ const countryData = {
     {
       name: 'UK',
       flag: 'https://flagcdn.com/w20/gb.png',
-      description: 'From 6:00',
+      description: '6:00',
     },
     {
       name: 'Switzerland',
       flag: 'https://flagcdn.com/w20/ch.png',
-      description: 'From 7:00',
+      description: '7:00',
     },
     {
       name: 'Portugal',
       flag: 'https://flagcdn.com/w20/pt.png',
-      description: 'From 5:00',
+      description: '5:00',
     },
     {
       name: 'Italy',
       flag: 'https://flagcdn.com/w20/it.png',
-      description: 'From 6:30',
+      description: '6:30',
     },
     {
       name: 'Greece',
       flag: 'https://flagcdn.com/w20/gr.png',
-      description: 'From 5:30',
+      description: '5:30',
     },
     {
       name: 'England',
       flag: 'https://flagcdn.com/w20/gb-eng.png',
-      description: 'From 6:15',
+      description: '6:15',
     },
     {
       name: 'Belarus',
       flag: 'https://flagcdn.com/w20/by.png',
-      description: 'From 8:00',
+      description: '8:00',
     },
     {
       name: 'Belgium',
       flag: 'https://flagcdn.com/w20/be.png',
-      description: 'From 7:30',
+      description: '7:30',
     },
   ],
   regional: [
@@ -149,8 +149,11 @@ export const CountrySelector = () => {
                 <h3 className="text-lg font-medium text-black">
                   {country.name}
                 </h3>
-                <p className="text-sm text-gray-500 mt-1">
-                  {country.description}
+                <p className="text-sm text-[#4f4f4f] mt-1">
+                  From{' '}
+                  <span className="bg-[#F6F8FA] ml-2 p-1 rounded-[6px]">
+                    {country.description}
+                  </span>
                 </p>
               </>
             ) : (

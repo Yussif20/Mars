@@ -4,7 +4,7 @@ import { Header, Footer } from '../components'; // Import your Header component
 
 export const Layout = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-white font-inter">
+    <div className="flex flex-col min-h-screen bg-[#fbfbfb] font-inter">
       {/* Header - Fixed across all routes */}
       <header className="w-full bg-white shadow-xs">
         <Header />

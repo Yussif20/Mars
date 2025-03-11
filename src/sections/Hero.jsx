@@ -13,19 +13,19 @@ export const Hero = () => {
           travel.
         </p>
         <div className="flex items-center justify-between flex-col md:flex-row gap-4">
-          <Button animated={false} size="sm">
+          <Button className="group" animated size="sm">
             <p className="flex items-center justify-center gap-2">
               <ion-icon
-                className="text-white text-2xl"
+                className="text-white text-2xl group-hover:text-black transition-colors duration-200"
                 name="logo-apple"
               ></ion-icon>
               <span>App Store</span>
             </p>
           </Button>{' '}
-          <Button animated={false} size="sm">
+          <Button className="group" animated size="sm">
             <p className="flex items-center justify-center gap-2">
               <ion-icon
-                className="text-white text-2xl"
+                className="text-white text-2xl group-hover:text-black transition-colors duration-200"
                 name="logo-google-playstore"
               ></ion-icon>
               <span>Play Store</span>
