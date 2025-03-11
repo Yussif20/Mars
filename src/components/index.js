@@ -1,3 +1,5 @@
 export * from './Footer'
 export * from './Header'
 export * from './Button'
+export * from './CountrySelector'
+export * from './PhoneSlideShow'

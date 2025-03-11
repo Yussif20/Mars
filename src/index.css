@@ -2,7 +2,11 @@
 
 @theme {
   --font-family-inter: 'Inter', 'sans-serif';
+  --breakpoint-xs: 450px;
   --breakpoint-sm: 600px;
   --breakpoint-md: 800px;
   --breakpoint-lg: 1024px;
+}
+body {
+  overflow-x: hidden;
 }
