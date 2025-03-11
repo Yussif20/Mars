@@ -1,5 +1,5 @@
 import { useInView } from 'react-intersection-observer';
-import { ContactUs, FAQ } from '../sections';
+import { FAQ, Testimonials, Values } from '../sections';
 
 // AnimatedSection Wrapper Component
 const AnimatedSection = ({ children }) => {
@@ -20,11 +20,14 @@ const AnimatedSection = ({ children }) => {
   );
 };
 
-export const Contact = () => {
+export const About = () => {
   return (
     <>
       <AnimatedSection>
-        <ContactUs />
+        <Values />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Testimonials />
       </AnimatedSection>
       <AnimatedSection>
         <FAQ />

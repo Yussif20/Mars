@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import { Button } from './Button';
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom'; // Use NavLink instead of Link
+import { Button } from './Button';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,13 +12,13 @@ export const Header = () => {
   return (
     <nav className="w-[95%] lg:w-[70%] mx-auto px-4 py-4 flex items-center justify-between relative">
       {/* Logo */}
-      <Link to="/" className="text-2xl font-bold z-20 flex-shrink-0">
+      <NavLink to="/" className="text-2xl font-bold z-20 flex-shrink-0">
         <img
           src="https://framerusercontent.com/images/0sQkZs5gqXS5nmVpJvWHpP2MYII.svg"
           alt="Logo"
           className="h-10"
         />
-      </Link>
+      </NavLink>
 
       {/* Burger Menu (visible below 800px) */}
       <button
@@ -51,40 +51,56 @@ export const Header = () => {
       <div className="hidden md:flex md:flex-row md:items-center md:static md:bg-transparent md:shadow-none md:py-0 md:flex-1 md:justify-center">
         <ul className="flex flex-col md:flex-row md:space-x-6 text-gray-500 text-sm font-medium leading-5 tracking-[0px] space-y-4 md:space-y-0 text-center">
           <li>
-            <Link
+            <NavLink
               to="/compatible-devices"
-              className="hover:text-black transition-colors ease-in"
+              className={({ isActive }) =>
+                `transition-colors ease-in ${
+                  isActive ? 'text-black' : 'text-gray-500 hover:text-black'
+                }`
+              }
               onClick={() => setIsOpen(false)}
             >
               Compatible Devices
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/data-plans"
-              className="hover:text-black transition-colors ease-in"
+              className={({ isActive }) =>
+                `transition-colors ease-in ${
+                  isActive ? 'text-black' : 'text-gray-500 hover:text-black'
+                }`
+              }
               onClick={() => setIsOpen(false)}
             >
               Data Plans
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/about-us"
-              className="hover:text-black transition-colors ease-in"
+              className={({ isActive }) =>
+                `transition-colors ease-in ${
+                  isActive ? 'text-black' : 'text-gray-500 hover:text-black'
+                }`
+              }
               onClick={() => setIsOpen(false)}
             >
               About Us
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/contact"
-              className="hover:text-black transition-colors ease-in"
+              className={({ isActive }) =>
+                `transition-colors ease-in ${
+                  isActive ? 'text-black' : 'text-gray-500 hover:text-black'
+                }`
+              }
               onClick={() => setIsOpen(false)}
             >
               Contact Us
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>
@@ -106,40 +122,56 @@ export const Header = () => {
         <div className="flex flex-col items-center absolute top-16 left-0 right-0 w-full bg-white shadow-md py-4 md:hidden">
           <ul className="flex flex-col space-y-4 text-gray-500 text-sm font-medium leading-5 tracking-[0px] text-center">
             <li>
-              <Link
+              <NavLink
                 to="/compatible-devices"
-                className="hover:text-black transition-colors ease-in"
+                className={({ isActive }) =>
+                  `transition-colors ease-in ${
+                    isActive ? 'text-black' : 'text-gray-500 hover:text-black'
+                  }`
+                }
                 onClick={() => setIsOpen(false)}
               >
                 Compatible Devices
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/data-plans"
-                className="hover:text-black transition-colors ease-in"
+                className={({ isActive }) =>
+                  `transition-colors ease-in ${
+                    isActive ? 'text-black' : 'text-gray-500 hover:text-black'
+                  }`
+                }
                 onClick={() => setIsOpen(false)}
               >
                 Data Plans
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/about-us"
-                className="hover:text-black transition-colors ease-in"
+                className={({ isActive }) =>
+                  `transition-colors ease-in ${
+                    isActive ? 'text-black' : 'text-gray-500 hover:text-black'
+                  }`
+                }
                 onClick={() => setIsOpen(false)}
               >
                 About Us
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link
+              <NavLink
                 to="/contact"
-                className="hover:text-black transition-colors ease-in"
+                className={({ isActive }) =>
+                  `transition-colors ease-in ${
+                    isActive ? 'text-black' : 'text-gray-500 hover:text-black'
+                  }`
+                }
                 onClick={() => setIsOpen(false)}
               >
                 Contact Us
-              </Link>
+              </NavLink>
             </li>
           </ul>
           <div className="mt-4">

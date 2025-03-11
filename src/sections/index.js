@@ -1,4 +1,6 @@
 export * from './Hero'
 export * from './Plans'
 export * from './ContactUs'
+export * from './Values'
+export * from './Testimonials'
 export * from './FAQ'
