@@ -1,18 +1,15 @@
 import { useState } from 'react';
 import { CountrySelector } from '../components';
-import { countryData } from '../data/countryData'; // Import from separate file
 
-export const DataPlans = () => {
+export const DataPlans = ({ data, hasSearch, isLong }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Filter local countries based on search term
-  const filteredLocalCountries = countryData.local.filter((country) =>
+  const filteredLocalCountries = data.local.filter((country) =>
     country.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  // Create filtered data object to pass to CountrySelector
   const filteredData = {
-    ...countryData,
+    ...data,
     local: filteredLocalCountries,
   };
 
@@ -29,18 +26,19 @@ export const DataPlans = () => {
           Choose the best ones and get connected throughout your trip
         </p>
 
-        {/* Search Bar */}
-        <div className="mt-4">
-          <input
-            type="text"
-            placeholder="Search countries..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full max-w-md p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-300 text-gray-700"
-          />
-        </div>
+        {hasSearch && (
+          <div className="mt-4">
+            <input
+              type="text"
+              placeholder="Search countries..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full max-w-md p-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-300 text-gray-700"
+            />
+          </div>
+        )}
       </div>
-      <CountrySelector data={filteredData} />
+      <CountrySelector isLong={isLong} data={filteredData} />
     </section>
   );
 };
