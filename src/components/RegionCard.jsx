@@ -4,7 +4,7 @@ const RegionCard = ({ country }) => {
   return (
     <Link
       to={`/country/${country.name.toLowerCase()}`}
-      className="bg-white h-[164px] w-[210px] py-5 px-6 shadow-md p-4 flex flex-col items-center text-center rounded-[6px]"
+      className="bg-white h-[164px] w-[210px] py-5 px-6 shadow-md p-4 flex flex-col items-center text-center rounded-[6px] transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1"
     >
       <>
         <h3 className="text-lg font-medium text-black">{country.name}</h3>

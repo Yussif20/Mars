@@ -48,7 +48,7 @@ export const CountryDetails = () => {
           <img
             src={selectedCountry.image}
             alt={`${selectedCountry.name} image`}
-            className="w-full h-[350px] object-cover rounded-lg"
+            className="w-full h-[350px] object-cover rounded-lg animate-imageReveal"
           />
         </div>
 
@@ -81,8 +81,8 @@ export const CountryDetails = () => {
 
           {/* Price Plan */}
           <div className="">
-            <div className="p-2 flex flex-col items-start justify-between gap-4 rounded-lg">
-              <p className=" leading-6 font-semibold mt-2">
+            <div className="p-2 flex flex-col items-center justify-between gap-4 rounded-lg">
+              <p className=" leading-6 font-semibold mt-2 animate-pulsePrice">
                 {selectedCountry.price}
               </p>
               <div className="flex items-center justify-between flex-col md:flex-row gap-4">
