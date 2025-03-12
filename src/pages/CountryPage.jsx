@@ -42,7 +42,7 @@ export const CountryPage = () => {
         {/* Left: Country Picture */}
         <div className="md:w-1/2 p-4">
           <img
-            src={selectedCountry.flag}
+            src={selectedCountry.image}
             alt={`${selectedCountry.name} image`}
             className="w-full h-[300px] object-cover rounded-lg"
           />
@@ -72,7 +72,7 @@ export const CountryPage = () => {
             <div className="bg-[#F6F8FA] p-4 rounded-lg">
               <p className="text-lg font-medium text-black">{pricePlan.name}</p>
               <p className="text-2xl font-bold text-[#cb460e] mt-2">
-                {pricePlan.price}
+                {selectedCountry.price}
               </p>
             </div>
           </div>
