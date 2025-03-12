@@ -1,14 +1,12 @@
-import { FAQ, Hero, Plans, Testimonials } from '../sections';
+import { FAQ, Testimonials } from '../sections';
+import { DataPlans } from '../sections/DataPlans';
 import AnimatedSection from '../utils/AnimatedSection';
 
-export const Home = () => {
+export const Plans = () => {
   return (
     <>
       <AnimatedSection>
-        <Hero />
-      </AnimatedSection>
-      <AnimatedSection>
-        <Plans />
+        <DataPlans />
       </AnimatedSection>
       <AnimatedSection>
         <Testimonials />
