@@ -119,7 +119,7 @@ export const Header = () => {
 
       {/* Mobile Menu (only visible when isOpen is true) */}
       {isOpen && (
-        <div className="flex flex-col items-center absolute top-16 left-0 right-0 w-full bg-white shadow-md py-4 md:hidden">
+        <div className="z-50 flex flex-col items-center absolute top-16 left-0 right-0 w-full bg-white shadow-md py-4 md:hidden">
           <ul className="flex flex-col space-y-4 text-gray-500 text-sm font-medium leading-5 tracking-[0px] text-center">
             <li>
               <NavLink

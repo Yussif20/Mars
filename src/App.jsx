@@ -3,8 +3,17 @@ import '@fontsource/inter';
 import '@fontsource/inter/500.css';
 import '@fontsource/inter/700.css';
 
-import { Layout, Home, ErrorPage, Contact, Plans, CountryPage } from './pages';
+import {
+  Layout,
+  Home,
+  ErrorPage,
+  Contact,
+  Plans,
+  CountryPage,
+  CompatibleDevices,
+} from './pages';
 import { About } from './pages/About';
+import { useEffect } from 'react';
 
 const router = createBrowserRouter([
   {
@@ -15,8 +24,9 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: 'contact', element: <Contact /> },
       { path: 'about-us', element: <About /> },
-      { path: 'data-plans', element: <Plans /> }, // No children here now
-      { path: 'country/:country', element: <CountryPage /> }, // New top-level route
+      { path: 'data-plans', element: <Plans /> },
+      { path: 'compatible-devices', element: <CompatibleDevices /> },
+      { path: 'country/:country', element: <CountryPage /> },
       { path: 'error', element: <ErrorPage /> },
       { path: '*', element: <ErrorPage /> },
     ],
@@ -24,6 +34,18 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  useEffect(() => {
+    const handleScrollToTop = () => {
+      window.scrollTo(0, 0);
+    };
+    const unsubscribe = router.subscribe(() => {
+      handleScrollToTop();
+    });
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
   return <RouterProvider router={router} />;
 }
 

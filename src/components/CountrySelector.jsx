@@ -27,7 +27,7 @@ export const CountrySelector = ({ data }) => {
   return (
     <section className="mx-auto px-4 py-8 font-inter">
       {/* Tab Buttons */}
-      <div className="w-[300px] mx-auto py-1 px-1 flex items-center justify-between mb-8 bg-[#F6F8FA] text-black text-sm font-medium leading-5 rounded-lg relative">
+      <div className="w-[300px] flex-wrap mx-auto py-1 px-1 flex items-center justify-between mb-8 bg-[#F6F8FA] text-black text-sm font-medium leading-5 rounded-lg relative">
         <button
           ref={(el) => (tabRefs.current[0] = el)}
           className={`border-none transition-all duration-300 cursor-pointer text-[#4e4e4e] rounded-[6px] py-1 px-4 hover:bg-white hover:text-black hover:shadow-2xl ${
