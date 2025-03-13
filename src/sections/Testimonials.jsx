@@ -29,11 +29,11 @@ export const Testimonials = () => {
       avatar: 'https://randomuser.me/api/portraits/men/4.jpg',
     },
   ];
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
     }, 4000); // Change every 4 seconds
-
     return () => clearInterval(interval); // Cleanup on unmount
   }, [testimonials.length]);
 
@@ -43,16 +43,16 @@ export const Testimonials = () => {
         <p className="text-[#cb460e] font-bold uppercase tracking-wider">
           TESTIMONIALS
         </p>
-        <h2 className="text-[32px] md:text-[40px] leading-10 font-semibold tracking-tight text-gray-800">
+        <h2 className="text-[28px] md:text-[40px] leading-10 font-semibold tracking-tight text-gray-800">
           Our Clients Speak for Us
         </h2>
-        <p className="leading-6 text-[#4f4f4f] text-lg tracking-tight">
+        <p className="leading-6 text-[#4f4f4f] text-base md:text-lg tracking-tight">
           Our eSIMs are trusted by over 5,000,000 people worldwide
         </p>
       </div>
 
-      <div className="mt-16 max-w-3xl mx-auto px-4">
-        <div className="relative h-64 overflow-hidden">
+      <div className="mt-12 max-w-3xl mx-auto px-4">
+        <div className="relative min-h-[200px] sm:min-h-[250px] ">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -64,17 +64,17 @@ export const Testimonials = () => {
                   : 'opacity-0 translate-x-full'
               }`}
             >
-              <div className="bg-white rounded-lg shadow-md p-6 max-w-md mx-auto">
-                <p className="text-gray-600 italic mb-4">
+              <div className="bg-white rounded-lg shadow-md p-4 sm:p-6 max-w-md mx-auto w-full">
+                <p className="text-gray-600 italic mb-4 text-sm sm:text-base leading-6">
                   "{testimonial.opinion}"
                 </p>
                 <div className="flex items-center gap-3">
                   <img
                     src={testimonial.avatar}
                     alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
                   />
-                  <span className="text-gray-800 font-medium">
+                  <span className="text-gray-800 font-medium text-sm sm:text-base">
                     {testimonial.name}
                   </span>
                 </div>
