@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import RegionCard from './RegionCard';
 import CountryCard from './CountryCard';
 
-export const CountrySelector = ({ data }) => {
+export const CountrySelector = ({ data, isLong }) => {
   const [selectedTab, setSelectedTab] = useState('local');
   const tabRefs = useRef([]);
 
@@ -72,13 +72,15 @@ export const CountrySelector = ({ data }) => {
 
       {/* Country Cards */}
       <div className="w-full grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-20 gap-y-10 place-items-center">
-        {data[selectedTab].map((country, index) =>
-          selectedTab === 'local' ? (
-            <CountryCard key={index} country={country} />
-          ) : (
-            <RegionCard key={index} country={country} />
-          )
-        )}
+        {data[selectedTab]
+          .slice(0, isLong ? data[selectedTab].length : 8)
+          .map((country, index) =>
+            selectedTab === 'local' ? (
+              <CountryCard key={index} country={country} />
+            ) : (
+              <RegionCard key={index} country={country} />
+            )
+          )}
       </div>
     </section>
   );
