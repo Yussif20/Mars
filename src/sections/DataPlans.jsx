@@ -14,7 +14,7 @@ export const DataPlans = ({ data, hasSearch, isLong }) => {
   };
 
   return (
-    <section>
+    <section className=" max-w-4xl mx-auto">
       <div className="text-center flex flex-col gap-4 max-w-2xl mx-auto py-14">
         <p className="text-[#cb460e] font-bold uppercase tracking-wider">
           DATA PLANS

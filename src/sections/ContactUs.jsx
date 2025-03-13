@@ -27,7 +27,7 @@ export const ContactUs = () => {
   };
 
   return (
-    <section className="font-inter py-12">
+    <section className="font-inter mx-auto max-w-4xl py-12">
       <div className="text-center flex flex-col gap-4 max-w-2xl mx-auto">
         <p className="text-[#cb460e] font-bold uppercase tracking-wider">
           Contact Us

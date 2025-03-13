@@ -1,5 +1,5 @@
 import { countryData } from '../data/countryData';
-import { FAQ, Hero, DataPlans, Testimonials } from '../sections';
+import { FAQ, Hero, DataPlans, Testimonials, Features } from '../sections';
 import AnimatedSection from '../utils/AnimatedSection';
 
 export const Home = () => {
@@ -10,6 +10,9 @@ export const Home = () => {
       </AnimatedSection>
       <AnimatedSection>
         <DataPlans isLong={false} hasSearch={false} data={countryData} />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Features />
       </AnimatedSection>
       <AnimatedSection>
         <Testimonials />
