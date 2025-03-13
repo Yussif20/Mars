@@ -1,4 +1,4 @@
-import { CountryDetails, FAQ, Testimonials } from '../sections';
+import { CountryDetails, FAQ, HowItWorks, Testimonials } from '../sections';
 import { CountryFAQ } from '../sections/CountryFAQ';
 import AnimatedSection from '../utils/AnimatedSection';
 
@@ -8,6 +8,9 @@ export const CountryPage = () => {
       <AnimatedSection>
         <CountryDetails />
         <CountryFAQ />
+      </AnimatedSection>
+      <AnimatedSection>
+        <HowItWorks />
       </AnimatedSection>
       <AnimatedSection>
         <Testimonials />

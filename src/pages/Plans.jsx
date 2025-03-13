@@ -1,4 +1,4 @@
-import { FAQ, Testimonials } from '../sections';
+import { FAQ, HowItWorks, Testimonials } from '../sections';
 import { DataPlans } from '../sections/DataPlans';
 import AnimatedSection from '../utils/AnimatedSection';
 
@@ -9,6 +9,9 @@ export const Plans = () => {
     <>
       <AnimatedSection>
         <DataPlans isLong={true} hasSearch={true} data={countryData} />
+      </AnimatedSection>
+      <AnimatedSection>
+        <HowItWorks />
       </AnimatedSection>
       <AnimatedSection>
         <Testimonials />

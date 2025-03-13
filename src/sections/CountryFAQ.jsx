@@ -34,7 +34,7 @@ export const CountryFAQ = () => {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 max-w-4xl mx-auto">
       {faqData.map((item, index) => (
         <div key={index} className="bg-white rounded-lg shadow-sm">
           <button

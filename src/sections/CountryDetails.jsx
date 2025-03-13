@@ -35,7 +35,7 @@ export const CountryDetails = () => {
   ];
 
   return (
-    <section className="py-8">
+    <section className="py-8 max-w-4xl mx-auto">
       <h2 className="text-sm font-medium leading-5 text-[#cb460e] text-center mb-6 uppercase">
         Destination
       </h2>
