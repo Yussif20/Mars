@@ -10,6 +10,40 @@
     "contactUs": "Contact Us",
     "getTheApp": "Get the App"
   },
+  "hero": {
+    "title": "Stay connected affordably\nwherever you roam.",
+    "subtitle": "Experience reliable connectivity at economical rates, wherever you travel.",
+    "appStore": "App Store",
+    "playStore": "Play Store"
+  },
+  "features": {
+    "heading": "Features",
+    "subheading": "Why Mars eSIM?",
+    "feature1": {
+      "title": "24/7 Support",
+      "description": "Our support team is available every day across all time zones"
+    },
+    "feature2": {
+      "title": "You can install your eSIM",
+      "description": "You have 90 days to start using your plan. But once you activate it on your phone and register on a network, your plan’s allocated duration begins."
+    },
+    "feature3": {
+      "title": "Privacy and Transparent",
+      "description": "Enhance privacy in all your daily communications with our innovative solutions, ensuring your peace of mind and confidentiality."
+    },
+    "feature4": {
+      "title": "Get the App",
+      "description": "Enhance privacy in all your daily communications with our innovative solutions"
+    },
+    "feature5": {
+      "title": "Payment Methods",
+      "description": "The Mars eSim gives you a variety of payment methods"
+    },
+    "feature6": {
+      "title": "Global Coverage",
+      "description": "Stay linked across 200+ countries and regions worldwide, ensuring connectivity wherever your travels take you"
+    }
+  },
   "CompatibleDevices": {
     "sectionTitle": "COMPATIBLE DEVICES",
     "heading": "Check the compatibility of your device",
@@ -91,5 +125,121 @@
         "avatar": "https://randomuser.me/api/portraits/men/4.jpg"
       }
     ]
+  },
+  "howItWorks": {
+    "title": "MARS APP",
+    "heading": "How Mars eSIM works?",
+    "step1": "💎 Download the app",
+    "step2": "🙌 Choose data plan",
+    "step3": "✅ Activate your eSim card",
+    "step4": "🎉 Start using it seamlessly"
+  },
+  "dataPlans": {
+    "title": "DATA PLANS",
+    "popularChoices": "Popular eSIM Choices",
+    "description": "Choose the best ones and get connected throughout your trip"
+  },
+  "search": {
+    "placeholder": "Search countries..."
+  },
+  "contactUs": {
+    "header": "Contact Us",
+    "title": "Get in Touch",
+    "description": "Have a feature suggestion, bug report, or question?",
+    "form": {
+      "namePlaceholder": "Your Name",
+      "emailPlaceholder": "your@email.com",
+      "messagePlaceholder": "Your message...",
+      "successMessage": "Thanks! We will be in touch soon."
+    }
+  },
+  "footer": {
+    "compatibleDevices": "Compatible Devices",
+    "dataPlans": "Data Plans",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us"
+  },
+  "local": {
+    "uk": { "name": "UK", "time": "6:00", "price": "US $10.00/GB" },
+    "switzerland": {
+      "name": "Switzerland",
+      "time": "7:00",
+      "price": "US $12.00/GB"
+    },
+    "portugal": {
+      "name": "Portugal",
+      "time": "5:00",
+      "price": "US $11.50/GB"
+    },
+    "italy": { "name": "Italy", "time": "6:30", "price": "US $10.50/GB" },
+    "greece": { "name": "Greece", "time": "5:30", "price": "US $9.00/GB" },
+    "england": { "name": "England", "time": "6:15", "price": "US $10.75/GB" },
+    "belarus": { "name": "Belarus", "time": "8:00", "price": "US $11.25/GB" },
+    "belgium": { "name": "Belgium", "time": "7:30", "price": "US $10.50/GB" },
+    "spain": { "name": "Spain", "time": "6:45", "price": "US $9.75/GB" },
+    "france": { "name": "France", "time": "6:00", "price": "US $12.25/GB" },
+    "germany": { "name": "Germany", "time": "7:30", "price": "US $11.50/GB" },
+    "netherlands": {
+      "name": "Netherlands",
+      "time": "6:15",
+      "price": "US $10.25/GB"
+    },
+    "sweden": { "name": "Sweden", "time": "7:45", "price": "US $12.00/GB" },
+    "norway": { "name": "Norway", "time": "8:30", "price": "US $11.75/GB" },
+    "denmark": { "name": "Denmark", "time": "7:00", "price": "US $10.75/GB" },
+    "finland": { "name": "Finland", "time": "8:00", "price": "US $11.25/GB" },
+    "ireland": { "name": "Ireland", "time": "6:45", "price": "US $10.50/GB" },
+    "austria": { "name": "Austria", "time": "7:15", "price": "US $9.50/GB" },
+    "poland": { "name": "Poland", "time": "7:30", "price": "US $11.00/GB" },
+    "czechRepublic": {
+      "name": "Czech Republic",
+      "time": "7:00",
+      "price": "US $10.75/GB"
+    },
+    "romania": { "name": "Romania", "time": "8:00", "price": "US $10.50/GB" },
+    "bulgaria": {
+      "name": "Bulgaria",
+      "time": "8:15",
+      "price": "US $10.75/GB"
+    },
+    "hungary": { "name": "Hungary", "time": "7:45", "price": "US $10.25/GB" },
+    "slovakia": {
+      "name": "Slovakia",
+      "time": "7:30",
+      "price": "US $10.00/GB"
+    },
+    "slovenia": { "name": "Slovenia", "time": "7:15", "price": "US $9.75/GB" }
+  },
+  "regional": {
+    "southAmerica": {
+      "name": "South America",
+      "desc": "18 countries",
+      "price": "US $14.00/GB"
+    },
+    "northAmerica": {
+      "name": "North America",
+      "desc": "23 countries",
+      "price": "US $15.50/GB"
+    },
+    "africa": {
+      "name": "Africa",
+      "desc": "54 countries",
+      "price": "US $13.00/GB"
+    },
+    "europe": {
+      "name": "Europe",
+      "desc": "44 countries",
+      "price": "US $16.00/GB"
+    },
+    "asia": {
+      "name": "Asia",
+      "desc": "48 countries",
+      "price": "US $14.50/GB"
+    }
+  },
+  "global": {
+    "name": "Global",
+    "desc": "136 countries",
+    "price": "US $18.00/GB"
   }
 }

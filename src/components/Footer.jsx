@@ -1,6 +1,9 @@
-import { Link } from 'react-router-dom'; // Updated import for react-router-dom v6
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="w-[95%] lg:w-[70%] mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between border-t border-gray-200">
       {/* Logo */}
@@ -19,7 +22,7 @@ export const Footer = () => {
             to="/compatible-devices"
             className="hover:text-black transition-colors ease-in"
           >
-            Compatible Devices
+            {t('footer.compatibleDevices')}
           </Link>
         </li>
         <li>
@@ -27,7 +30,7 @@ export const Footer = () => {
             to="/data-plans"
             className="hover:text-black transition-colors ease-in"
           >
-            Data Plans
+            {t('footer.dataPlans')}
           </Link>
         </li>
         <li>
@@ -35,7 +38,7 @@ export const Footer = () => {
             to="/about-us"
             className="hover:text-black transition-colors ease-in"
           >
-            About Us
+            {t('footer.aboutUs')}
           </Link>
         </li>
         <li>
@@ -43,7 +46,7 @@ export const Footer = () => {
             to="/contact"
             className="hover:text-black transition-colors ease-in"
           >
-            Contact Us
+            {t('footer.contactUs')}
           </Link>
         </li>
       </ul>

@@ -1,7 +1,9 @@
 import { Button } from '../components';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const ContactUs = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,13 +32,13 @@ export const ContactUs = () => {
     <section className="font-inter mx-auto max-w-4xl py-12">
       <div className="text-center flex flex-col gap-4 max-w-2xl mx-auto">
         <p className="text-[#cb460e] font-bold uppercase tracking-wider">
-          Contact Us
+          {t('contactUs.header')}
         </p>
         <h2 className="text-[32px] md:text-[40px] leading-10 font-semibold tracking-tight text-gray-800">
-          Get in Touch
+          {t('contactUs.title')}
         </h2>
         <p className="leading-6 text-[#4f4f4f] text-lg">
-          Have a feature suggestion, bug report, or question?
+          {t('contactUs.description')}
         </p>
       </div>
 
@@ -50,7 +52,7 @@ export const ContactUs = () => {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          placeholder="Your Name"
+          placeholder={t('contactUs.form.namePlaceholder')}
           required
         />
         <input
@@ -59,7 +61,7 @@ export const ContactUs = () => {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="your@email.com"
+          placeholder={t('contactUs.form.emailPlaceholder')}
           required
         />
         <textarea
@@ -67,7 +69,7 @@ export const ContactUs = () => {
           name="message"
           value={formData.message}
           onChange={handleChange}
-          placeholder="Your message..."
+          placeholder={t('contactUs.form.messagePlaceholder')}
           required
         />
         <div className="w-full">
@@ -77,13 +79,13 @@ export const ContactUs = () => {
             size="md"
             type="submit"
           >
-            Send Message
+            {t('buttons.sendMessage')}
           </Button>
         </div>
 
         {submitted && (
           <div className="fixed top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-md shadow-lg animate-fade-in">
-            Thanks! We will be in touch soon.
+            {t('contactUs.form.successMessage')}
           </div>
         )}
       </form>

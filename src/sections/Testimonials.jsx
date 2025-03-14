@@ -16,7 +16,7 @@ export const Testimonials = () => {
   }, [testimonials.length]);
 
   return (
-    <section className="py-14">
+    <section className="py-14 overflow-x-hidden">
       <div className="text-center flex flex-col gap-4 max-w-2xl mx-auto">
         <p className="text-[#cb460e] font-bold uppercase tracking-wider">
           {t('testimonials.title')}
