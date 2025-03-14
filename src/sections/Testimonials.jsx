@@ -1,58 +1,36 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export const Testimonials = () => {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const testimonials = [
-    {
-      opinion:
-        'The eSIM made traveling so much easier! No more hunting for local SIM cards at airports or dealing with language barriers to get connected. I was up and running with data in minutes, which saved me a lot of hassle on my last trip abroad.',
-      name: 'Tom Johnson',
-      avatar: 'https://randomuser.me/api/portraits/men/1.jpg',
-    },
-    {
-      opinion:
-        'Switching carriers was a breeze with this eSIM. The service is excellent, and the connectivity has been flawless even in remote areas. I appreciate how seamless the process was—no need to visit a store or wait for a physical SIM to arrive.',
-      name: 'Michael Chen',
-      avatar: 'https://randomuser.me/api/portraits/men/5.jpg',
-    },
-    {
-      opinion:
-        'I love the flexibility of managing multiple lines on one device with the eSIM. It’s perfect for separating work and personal calls without carrying two phones. The setup was intuitive, and I’ve had no issues juggling both numbers on the go.',
-      name: 'John Rodriguez',
-      avatar: 'https://randomuser.me/api/portraits/men/3.jpg',
-    },
-    {
-      opinion:
-        'This eSIM is reliable and affordable—exactly what I need for my international business trips. The coverage is impressive, and the pricing is transparent with no hidden fees. It’s become an essential tool for staying connected across borders.',
-      name: 'James Carter',
-      avatar: 'https://randomuser.me/api/portraits/men/4.jpg',
-    },
-  ];
+  const testimonials = t('testimonials.reviews', { returnObjects: true });
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 4000); // Change every 4 seconds
-    return () => clearInterval(interval); // Cleanup on unmount
+    }, 4000); // تغيير الشهادة كل 4 ثوانٍ
+
+    return () => clearInterval(interval); // تنظيف المؤقت عند إلغاء المكون
   }, [testimonials.length]);
 
   return (
     <section className="py-14">
       <div className="text-center flex flex-col gap-4 max-w-2xl mx-auto">
         <p className="text-[#cb460e] font-bold uppercase tracking-wider">
-          TESTIMONIALS
+          {t('testimonials.title')}
         </p>
         <h2 className="text-[28px] md:text-[40px] leading-10 font-semibold tracking-tight text-gray-800">
-          Our Clients Speak for Us
+          {t('testimonials.subtitle')}
         </h2>
         <p className="leading-6 text-[#4f4f4f] text-base md:text-lg tracking-tight">
-          Our eSIMs are trusted by over 5,000,000 people worldwide
+          {t('testimonials.description')}
         </p>
       </div>
 
       <div className="mt-12 max-w-3xl mx-auto px-4">
-        <div className="relative min-h-[200px] sm:min-h-[250px] ">
+        <div className="relative min-h-[200px] sm:min-h-[250px]">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
