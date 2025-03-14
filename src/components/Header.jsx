@@ -1,9 +1,14 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom'; // Use NavLink instead of Link
 import { Button } from './Button';
+import LanguageSwitcher from './LanguageSwitcher';
+
+import { useTranslation } from 'react-i18next';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const { t } = useTranslation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -19,7 +24,7 @@ export const Header = () => {
           className="h-10"
         />
       </NavLink>
-
+      <LanguageSwitcher />
       {/* Burger Menu (visible below 800px) */}
       <button
         className="md:hidden z-20 focus:outline-none flex-shrink-0 cursor-pointer"
@@ -60,7 +65,7 @@ export const Header = () => {
               }
               onClick={() => setIsOpen(false)}
             >
-              Compatible Devices
+              {t('header.compatibleDevices')}
             </NavLink>
           </li>
           <li>
@@ -73,7 +78,7 @@ export const Header = () => {
               }
               onClick={() => setIsOpen(false)}
             >
-              Data Plans
+              {t('header.dataPlans')}
             </NavLink>
           </li>
           <li>
@@ -86,7 +91,7 @@ export const Header = () => {
               }
               onClick={() => setIsOpen(false)}
             >
-              About Us
+              {t('header.aboutUs')}
             </NavLink>
           </li>
           <li>
@@ -99,7 +104,7 @@ export const Header = () => {
               }
               onClick={() => setIsOpen(false)}
             >
-              Contact Us
+              {t('header.contactUs')}
             </NavLink>
           </li>
         </ul>
@@ -109,7 +114,7 @@ export const Header = () => {
       <div className="hidden md:block md:flex-shrink-0">
         <Button animated size="md" onClick={() => setIsOpen(false)}>
           <p className="flex items-center justify-center gap-2">
-            Get the App
+            {t('buttons.getTheApp')}
             <span className="text-black inline-flex items-center justify-center w-6 h-6 bg-white border border-black rounded-full">
               <ion-icon name="chevron-forward-outline"></ion-icon>
             </span>
@@ -131,7 +136,7 @@ export const Header = () => {
                 }
                 onClick={() => setIsOpen(false)}
               >
-                Compatible Devices
+                {t('header.compatibleDevices')}
               </NavLink>
             </li>
             <li>
@@ -144,7 +149,7 @@ export const Header = () => {
                 }
                 onClick={() => setIsOpen(false)}
               >
-                Data Plans
+                {t('header.dataPlans')}
               </NavLink>
             </li>
             <li>
@@ -157,7 +162,7 @@ export const Header = () => {
                 }
                 onClick={() => setIsOpen(false)}
               >
-                About Us
+                {t('header.aboutUs')}
               </NavLink>
             </li>
             <li>
@@ -170,14 +175,14 @@ export const Header = () => {
                 }
                 onClick={() => setIsOpen(false)}
               >
-                Contact Us
+                {t('header.contactUs')}
               </NavLink>
             </li>
           </ul>
           <div className="mt-4">
             <Button animated size="md" onClick={() => setIsOpen(false)}>
               <p className="flex items-center justify-center gap-2">
-                Get the App
+                {t('buttons.getTheApp')}
                 <span className="text-black inline-flex items-center justify-center w-6 h-6 bg-white border border-black rounded-full">
                   <ion-icon name="chevron-forward-outline"></ion-icon>
                 </span>

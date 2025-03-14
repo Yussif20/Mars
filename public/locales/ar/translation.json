@@ -1,0 +1,33 @@
+{
+  "languageOptions": [
+    { "value": "en", "label": "English" },
+    { "value": "ar", "label": "العربية" }
+  ],
+  "header": {
+    "compatibleDevices": "الأجهزة المتوافقة",
+    "dataPlans": "خطط البيانات",
+    "aboutUs": "من نحن",
+    "contactUs": "اتصل بنا",
+    "getTheApp": "تحميل التطبيق"
+  },
+  "CompatibleDevices": {
+    "sectionTitle": "الأجهزة المتوافقة",
+    "heading": "تحقق من توافق جهازك",
+    "description": "تحقق من القائمة أدناه لمعرفة ما إذا كان جهازك يدعم تقنية eSIM.",
+    "buttonText": "تحقق الآن",
+    "imageAlt": "رسم توضيحي للأجهزة المتوافقة"
+  },
+  "buttons": {
+    "getTheApp": "تحميل التطبيق",
+    "checkNow": "تحقق الآن",
+    "playStore": "متجر بلاي",
+    "appStore": "متجر التطبيقات",
+    "sendMessage": "إرسال رسالة"
+  },
+  "devices": {
+    "apple": "آبل",
+    "samsung": "سامسونج",
+    "googlePixel": "جوجل بيكسل",
+    "other": "أخرى"
+  }
+}

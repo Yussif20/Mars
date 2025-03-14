@@ -1,4 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { I18nextProvider } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
+
 import '@fontsource/inter';
 import '@fontsource/inter/500.css';
 import '@fontsource/inter/700.css';
@@ -46,7 +49,18 @@ function App() {
     };
   }, []);
 
-  return <RouterProvider router={router} />;
+  const { i18n } = useTranslation();
+
+  useEffect(() => {
+    document.documentElement.lang = i18n.language; // تحديث لغة الصفحة
+    document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr'; // تغيير الاتجاه
+  }, [i18n.language]);
+
+  return (
+    <I18nextProvider i18n={i18n}>
+      <RouterProvider router={router} />
+    </I18nextProvider>
+  );
 }
 
 export default App;

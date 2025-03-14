@@ -1,0 +1,33 @@
+{
+  "languageOptions": [
+    { "value": "en", "label": "English" },
+    { "value": "ar", "label": "العربية" }
+  ],
+  "header": {
+    "compatibleDevices": "Compatible Devices",
+    "dataPlans": "Data Plans",
+    "aboutUs": "About Us",
+    "contactUs": "Contact Us",
+    "getTheApp": "Get the App"
+  },
+  "CompatibleDevices": {
+    "sectionTitle": "COMPATIBLE DEVICES",
+    "heading": "Check the compatibility of your device",
+    "description": "Refer to the list below to see if your device supports eSIM technology.",
+    "buttonText": "Check Now",
+    "imageAlt": "Compatible devices illustration"
+  },
+  "buttons": {
+    "getTheApp": "Get the App",
+    "checkNow": "Check Now",
+    "playStore": "Play Store",
+    "appStore": "App Store",
+    "sendMessage": "Send Message"
+  },
+  "devices": {
+    "apple": "Apple",
+    "samsung": "Samsung",
+    "googlePixel": "Google Pixel",
+    "other": "Other"
+  }
+}

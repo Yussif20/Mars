@@ -1,4 +1,6 @@
-// Device data
+import { useState, useRef, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+
 const deviceData = {
   apple: [
     'iPhone 15, 15 Plus, 15 Pro, 15 Pro Max',
@@ -48,12 +50,12 @@ const deviceData = {
     'Oppo Reno 5A, Reno 6 Pro 5G',
   ],
 };
-import { useState, useRef, useEffect } from 'react';
 
 export const DeviceSelector = () => {
+  const { t } = useTranslation();
   const [selectedTab, setSelectedTab] = useState('apple');
   const tabRefs = useRef([]);
-  const [underlinePosition, setUnderlinePosition] = useState('0px'); // State for underline position
+  const [underlinePosition, setUnderlinePosition] = useState('0px');
 
   const handleTabChange = (tab) => {
     setSelectedTab(tab);
@@ -72,68 +74,38 @@ export const DeviceSelector = () => {
     if (tab) {
       const tabWidth = tab.offsetWidth;
       const tabLeft = tab.offsetLeft;
-      return `${tabLeft + (tabWidth - 60) / 2}px`; // Center the 60px underline
+      return `${tabLeft + (tabWidth - 60) / 2}px`;
     }
-    return '0px'; // Fallback
+    return '0px';
   };
 
-  // Set initial underline position after mount
   useEffect(() => {
     setUnderlinePosition(getLeftPosition());
-  }, [selectedTab]); // Re-run when selectedTab changes
+  }, [selectedTab]);
+
   return (
     <section className="mx-auto px-4 py-8 font-inter">
       {/* Tab Buttons */}
       <div className="max-w-[400px] w-full mx-auto py-1 px-2 sm:px-4 flex items-center justify-around mb-8 bg-[#F6F8FA] text-black text-xs sm:text-sm font-medium leading-5 rounded-lg relative">
-        <button
-          ref={(el) => (tabRefs.current[0] = el)}
-          className={`border-none transition-all duration-300 cursor-pointer text-[#4e4e4e] rounded-[6px] py-1 px-2 sm:px-4 hover:bg-white hover:text-black hover:shadow-2xl ${
-            selectedTab === 'apple'
-              ? 'bg-white text-black shadow-2xl scale-105'
-              : 'bg-transparent'
-          }`}
-          onClick={() => handleTabChange('apple')}
-        >
-          Apple
-        </button>
-        <button
-          ref={(el) => (tabRefs.current[1] = el)}
-          className={`border-none transition-all duration-300 cursor-pointer text-[#4e4e4e] rounded-[6px] py-1 px-2 sm:px-4 hover:bg-white hover:text-black hover:shadow-2xl ${
-            selectedTab === 'samsung'
-              ? 'bg-white text-black shadow-2xl scale-105'
-              : 'bg-transparent'
-          }`}
-          onClick={() => handleTabChange('samsung')}
-        >
-          Samsung
-        </button>
-        <button
-          ref={(el) => (tabRefs.current[2] = el)}
-          className={`border-none transition-all duration-300 cursor-pointer text-[#4e4e4e] rounded-[6px] py-1 px-2 sm:px-4 hover:bg-white hover:text-black hover:shadow-2xl ${
-            selectedTab === 'googlePixel'
-              ? 'bg-white text-black shadow-2xl scale-105'
-              : 'bg-transparent'
-          }`}
-          onClick={() => handleTabChange('googlePixel')}
-        >
-          Google Pixel
-        </button>
-        <button
-          ref={(el) => (tabRefs.current[3] = el)}
-          className={`border-none transition-all duration-300 cursor-pointer text-[#4e4e4e] rounded-[6px] py-1 px-2 sm:px-4 hover:bg-white hover:text-black hover:shadow-2xl ${
-            selectedTab === 'other'
-              ? 'bg-white text-black shadow-2xl scale-105'
-              : 'bg-transparent'
-          }`}
-          onClick={() => handleTabChange('other')}
-        >
-          Other
-        </button>
+        {['apple', 'samsung', 'googlePixel', 'other'].map((tab, index) => (
+          <button
+            key={tab}
+            ref={(el) => (tabRefs.current[index] = el)}
+            className={`border-none transition-all duration-300 cursor-pointer text-[#4e4e4e] rounded-[6px] py-1 px-2 sm:px-4 hover:bg-white hover:text-black hover:shadow-2xl ${
+              selectedTab === tab
+                ? 'bg-white text-black shadow-2xl scale-105'
+                : 'bg-transparent'
+            }`}
+            onClick={() => handleTabChange(tab)}
+          >
+            {t(`devices.${tab}`)}
+          </button>
+        ))}
         <span
           className="absolute bottom-0 h-1 bg-[#cb460e] transition-all duration-300 hidden sm:block"
           style={{
             width: '60px',
-            left: underlinePosition, // Use state instead of function call
+            left: underlinePosition,
           }}
         />
       </div>
