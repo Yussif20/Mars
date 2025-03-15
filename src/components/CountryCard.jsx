@@ -18,7 +18,7 @@ const CountryCard = ({ country }) => {
       <p className="text-sm text-[#4f4f4f] mt-1">
         {t('from')}
         <span className="bg-[#F6F8FA] ml-2 p-1 rounded-[6px]">
-          {country.description}
+          {country.description}$
         </span>
       </p>
     </Link>
