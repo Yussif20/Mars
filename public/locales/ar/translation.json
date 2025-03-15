@@ -44,6 +44,235 @@
     "buttonText": "تحقق الآن",
     "imageAlt": "رسم توضيحي للأجهزة المتوافقة"
   },
+  "countrySelector": {
+    "local": {
+      "tab": "محلي",
+      "countries": [
+        {
+          "key": "uk",
+          "name": "المملكة المتحدة",
+          "flag": "https://flagcdn.com/w20/gb.png",
+          "description": "6:00",
+          "price": "دولار أمريكي $10.00/جيجابايت"
+        },
+        {
+          "key": "switzerland",
+          "name": "سويسرا",
+          "flag": "https://flagcdn.com/w20/ch.png",
+          "description": "7:00",
+          "price": "دولار أمريكي $12.00/جيجابايت"
+        },
+        {
+          "key": "portugal",
+          "name": "البرتغال",
+          "flag": "https://flagcdn.com/w20/pt.png",
+          "description": "5:00",
+          "price": "دولار أمريكي $11.50/جيجابايت"
+        },
+        {
+          "key": "italy",
+          "name": "إيطاليا",
+          "flag": "https://flagcdn.com/w20/it.png",
+          "description": "6:30",
+          "price": "دولار أمريكي $10.50/جيجابايت"
+        },
+        {
+          "key": "greece",
+          "name": "اليونان",
+          "flag": "https://flagcdn.com/w20/gr.png",
+          "description": "5:30",
+          "price": "دولار أمريكي $9.00/جيجابايت"
+        },
+        {
+          "key": "england",
+          "name": "إنجلترا",
+          "flag": "https://flagcdn.com/w20/gb-eng.png",
+          "description": "6:15",
+          "price": "دولار أمريكي $10.75/جيجابايت"
+        },
+        {
+          "key": "belarus",
+          "name": "بيلاروسيا",
+          "flag": "https://flagcdn.com/w20/by.png",
+          "description": "8:00",
+          "price": "دولار أمريكي $11.25/جيجابايت"
+        },
+        {
+          "key": "belgium",
+          "name": "بلجيكا",
+          "flag": "https://flagcdn.com/w20/be.png",
+          "description": "7:30",
+          "price": "دولار أمريكي $10.50/جيجابايت"
+        },
+        {
+          "key": "spain",
+          "name": "إسبانيا",
+          "flag": "https://flagcdn.com/w20/es.png",
+          "description": "6:45",
+          "price": "دولار أمريكي $9.75/جيجابايت"
+        },
+        {
+          "key": "france",
+          "name": "فرنسا",
+          "flag": "https://flagcdn.com/w20/fr.png",
+          "description": "6:00",
+          "price": "دولار أمريكي $12.25/جيجابايت"
+        },
+        {
+          "key": "germany",
+          "name": "ألمانيا",
+          "flag": "https://flagcdn.com/w20/de.png",
+          "description": "7:30",
+          "price": "دولار أمريكي $11.50/جيجابايت"
+        },
+        {
+          "key": "netherlands",
+          "name": "هولندا",
+          "flag": "https://flagcdn.com/w20/nl.png",
+          "description": "6:15",
+          "price": "دولار أمريكي $10.25/جيجابايت"
+        },
+        {
+          "key": "sweden",
+          "name": "السويد",
+          "flag": "https://flagcdn.com/w20/se.png",
+          "description": "7:45",
+          "price": "دولار أمريكي $12.00/جيجابايت"
+        },
+        {
+          "key": "norway",
+          "name": "النرويج",
+          "flag": "https://flagcdn.com/w20/no.png",
+          "description": "8:30",
+          "price": "دولار أمريكي $11.75/جيجابايت"
+        },
+        {
+          "key": "denmark",
+          "name": "الدنمارك",
+          "flag": "https://flagcdn.com/w20/dk.png",
+          "description": "7:00",
+          "price": "دولار أمريكي $10.75/جيجابايت"
+        },
+        {
+          "key": "finland",
+          "name": "فنلندا",
+          "flag": "https://flagcdn.com/w20/fi.png",
+          "description": "8:00",
+          "price": "دولار أمريكي $11.25/جيجابايت"
+        },
+        {
+          "key": "ireland",
+          "name": "أيرلندا",
+          "flag": "https://flagcdn.com/w20/ie.png",
+          "description": "6:45",
+          "price": "دولار أمريكي $10.50/جيجابايت"
+        },
+        {
+          "key": "austria",
+          "name": "النمسا",
+          "flag": "https://flagcdn.com/w20/at.png",
+          "description": "7:15",
+          "price": "دولار أمريكي $9.50/جيجابايت"
+        },
+        {
+          "key": "poland",
+          "name": "بولندا",
+          "flag": "https://flagcdn.com/w20/pl.png",
+          "description": "7:30",
+          "price": "دولار أمريكي $11.00/جيجابايت"
+        },
+        {
+          "key": "czech-republic",
+          "name": "جمهورية التشيك",
+          "flag": "https://flagcdn.com/w20/cz.png",
+          "description": "7:00",
+          "price": "دولار أمريكي $10.75/جيجابايت"
+        }
+      ]
+    },
+    "regional": {
+      "tab": "إقليمي",
+      "regions": [
+        {
+          "key": "south-america",
+          "name": "أمريكا الجنوبية",
+          "flag": "southAmericaImage",
+          "description": "18 دولة",
+          "price": "دولار أمريكي $14.00/جيجابايت"
+        },
+        {
+          "key": "north-america",
+          "name": "أمريكا الشمالية",
+          "flag": "northAmericaImage",
+          "description": "23 دولة",
+          "price": "دولار أمريكي $15.50/جيجابايت"
+        },
+        {
+          "key": "africa",
+          "name": "أفريقيا",
+          "flag": "africaImage",
+          "description": "54 دولة",
+          "price": "دولار أمريكي $13.00/جيجابايت"
+        },
+        {
+          "key": "europe",
+          "name": "أوروبا",
+          "flag": "europaImage",
+          "description": "44 دولة",
+          "price": "دولار أمريكي $16.00/جيجابايت"
+        },
+        {
+          "key": "asia",
+          "name": "آسيا",
+          "flag": "asiaImage",
+          "description": "48 دولة",
+          "price": "دولار أمريكي $14.50/جيجابايت"
+        }
+      ]
+    },
+    "global": {
+      "tab": "عالمي",
+      "plans": [
+        {
+          "key": "global",
+          "name": "عالمي",
+          "flag": "globalImage",
+          "description": "136 دولة",
+          "price": "دولار أمريكي $18.00/جيجابايت"
+        }
+      ]
+    }
+  },
+  "countryDetails": {
+    "destination": "الوجهة",
+    "notFound": "الدولة غير موجودة",
+    "features": [
+      { "title": "بطاقة SIM رقمية", "text": "إعادة شحن سهلة" },
+      {
+        "title": "خطط البيانات",
+        "text": "ادفع تكاليف أقل لخطط البيانات لدينا"
+      },
+      { "title": "تاريخ الانتهاء", "text": "12 شهرًا بعد التفعيل" }
+    ],
+    "appStore": "متجر التطبيقات",
+    "playStore": "متجر جوجل بلاي"
+  },
+  "countryFAQ": {
+    "items": [
+      {
+        "question": "الميزات",
+        "answer": "تتيح لك بطاقة eSIM للولايات المتحدة الاتصال بالإنترنت في هذه الوجهة خلال دقائق. استمتع ببيانات غير محدودة بسرعة 3G/4G/LTE. انسَ التجوال أو البحث عن بطاقات SIM في المطارات؛ ستتلقى بطاقة eSIM فورًا بعد الشراء. استخدم تطبيقاتك المفضلة للاتصال بجميع أصدقائك وعائلتك، مثل WhatsApp أو iMessage، دون قيود. يمكنك الاحتفاظ ببطاقة SIM المحلية في هاتفك إذا أردت استخدامها للرسائل النصية أو المكالمات. لتفعيلها، ما عليك سوى اتباع التعليمات التي نرسلها إلى بريدك الإلكتروني."
+      },
+      {
+        "question": "الوصف",
+        "answer": "تقدم FutureConnect اتصالًا متنقلًا خاليًا من المتاعب من خلال تقنية eSIM المبتكرة. توفر بطاقات SIM الرقمية لدينا تفعيلًا فوريًا، وتغطية عالمية، وخططًا مرنة دون الحاجة إلى بطاقات SIM فعلية. سواء كنت مسافرًا متكررًا، أو عاملًا عن بُعد، أو تبحث ببساطة عن تجربة اتصال متنقلة أكثر راحة، تقدم FutureConnect خدمة خلوية موثوقة وآمنة وصديقة للبيئة. جرب مستقبل الاتصال المتنقل مع تطبيقنا سهل الاستخدام والأجهزة المتوافقة."
+      },
+      {
+        "question": "الخطاب التقني",
+        "answer": "تتيح لك بطاقة eSIM للولايات المتحدة الاتصال بالإنترنت في هذه الوجهة خلال دقائق. استمتع ببيانات غير محدودة بسرعة 3G/4G/LTE. انسَ التجوال أو البحث عن بطاقات SIM في المطارات؛ ستتلقى بطاقة eSIM فورًا بعد الشراء. استخدم تطبيقاتك المفضلة للاتصال بجميع أصدقائك وعائلتك، مثل WhatsApp أو iMessage، دون قيود. يمكنك الاحتفاظ ببطاقة SIM المحلية في هاتفك إذا أردت استخدامها للرسائل النصية أو المكالمات. لتفعيلها، ما عليك سوى اتباع التعليمات التي نرسلها إلى بريدك الإلكتروني."
+      }
+    ]
+  },
   "values": {
     "title": "قيمنا",
     "heading": "كيف نعمل",

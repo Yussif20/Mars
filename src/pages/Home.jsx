@@ -1,4 +1,3 @@
-import { countryData } from '../data/countryData';
 import {
   FAQ,
   Hero,
@@ -16,7 +15,7 @@ export const Home = () => {
         <Hero />
       </AnimatedSection>
       <AnimatedSection>
-        <DataPlans isLong={false} hasSearch={false} data={countryData} />
+        <DataPlans isLong={false} hasSearch={false} />
       </AnimatedSection>
       <AnimatedSection>
         <Features />

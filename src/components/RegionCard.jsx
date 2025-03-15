@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 const RegionCard = ({ country }) => {
   return (
     <Link
-      to={`/country/${country.name.toLowerCase()}`}
+      to={`/country/${country.key}`}
       className="bg-white h-[164px] w-[210px] py-5 px-6 shadow-md p-4 flex flex-col items-center text-center rounded-[6px] transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:-translate-y-1"
     >
       <>

@@ -1,25 +1,11 @@
 import { useState } from 'react';
-
-const faqData = [
-  {
-    question: 'Features',
-    answer:
-      'An eSIM for United States allows you to connect to the Internet at this destination in minutes. Enjoy unlimited data at 3G/4G/LTE speed. Forget about roaming or searching for SIM cards at airports; you receive the eSIM immediately after purchase. Use your favorite apps to call all your friends and family, such as WhatsApp or iMessage, without restrictions.You can still keep your domestic SIM card on your cellphone if you want to use it for SMS or calls. To activate it, you just need to follow the instructions we send to your email.',
-  },
-  {
-    question: 'Description',
-    answer:
-      "FutureConnect offers hassle-free mobile connectivity through innovative eSIM technology. Our digital SIM cards provide instant activation, global coverage, and flexible plans without the need for physical SIM cards. Whether you're a frequent traveler, a remote worker, or simply looking for a more convenient mobile experience, FutureConnect delivers reliable, secure, and eco-friendly cellular service. Experience the future of mobile connectivity with our easy-to-use app and compatible devices.",
-  },
-  {
-    question: 'Technical Speech',
-    answer:
-      'An eSIM for United States allows you to connect to the Internet at this destination in minutes. Enjoy unlimited data at 3G/4G/LTE speed. Forget about roaming or searching for SIM cards at airports; you receive the eSIM immediately after purchase. Use your favorite apps to call all your friends and family, such as WhatsApp or iMessage, without restrictions.You can still keep your domestic SIM card on your cellphone if you want to use it for SMS or calls. To activate it, you just need to follow the instructions we send to your email.',
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 export const CountryFAQ = () => {
+  const { t, i18n } = useTranslation();
   const [openIndices, setOpenIndices] = useState(new Set());
+
+  const faqData = t('countryFAQ.items', { returnObjects: true });
 
   const toggleFAQ = (index) => {
     setOpenIndices((prev) => {
@@ -34,7 +20,7 @@ export const CountryFAQ = () => {
   };
 
   return (
-    <div className="space-y-4 max-w-4xl mx-auto">
+    <div className="space-y-4 max-w-4xl mx-auto" dir={i18n.dir()}>
       {faqData.map((item, index) => (
         <div key={index} className="bg-white rounded-lg shadow-sm">
           <button

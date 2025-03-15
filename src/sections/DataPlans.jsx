@@ -1,18 +1,63 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CountrySelector } from '../components';
+import asiaImage from '../assets/asia.jpg';
+import globalImage from '../assets/global.webp';
+import northAmericaImage from '../assets/north-america.jpg';
+import southAmericaImage from '../assets/south-america.jpg';
+import europaImage from '../assets/europa.webp';
+import africaImage from '../assets/africa.jpg';
+import localImage from '../assets/local-image.avif';
+import regionalImage from '../assets/regional-image.avif';
+import global from '../assets/global-image.jpg';
 
-export const DataPlans = ({ data, hasSearch, isLong }) => {
+const imageMap = {
+  southAmericaImage,
+  northAmericaImage,
+  africaImage,
+  europaImage,
+  asiaImage,
+  globalImage,
+};
+
+export const DataPlans = ({ hasSearch, isLong }) => {
   const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredLocalCountries = data.local.filter((country) =>
-    country.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // Fetch all country data from translations and assign images
+  const countryData = {
+    local: t('countrySelector.local.countries', { returnObjects: true }).map(
+      (item) => ({
+        ...item,
+        image: localImage, // Assign localImage to all local countries
+      })
+    ),
+    regional: t('countrySelector.regional.regions', {
+      returnObjects: true,
+    }).map((item) => ({
+      ...item,
+      flag: imageMap[item.flag], // Map flag images for regions
+      image: regionalImage, // Assign regionalImage to all regions
+    })),
+    global: t('countrySelector.global.plans', { returnObjects: true }).map(
+      (item) => ({
+        ...item,
+        flag: imageMap[item.flag], // Map flag image for global
+        image: global, // Assign global image to global plan
+      })
+    ),
+  };
 
   const filteredData = {
-    ...data,
-    local: filteredLocalCountries,
+    local: countryData.local.filter((country) =>
+      country.name.toLowerCase().includes(searchTerm.toLowerCase())
+    ),
+    regional: countryData.regional.filter((region) =>
+      region.name.toLowerCase().includes(searchTerm.toLowerCase())
+    ),
+    global: countryData.global.filter((plan) =>
+      plan.name.toLowerCase().includes(searchTerm.toLowerCase())
+    ),
   };
 
   return (

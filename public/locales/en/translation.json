@@ -44,6 +44,232 @@
     "buttonText": "Check Now",
     "imageAlt": "Compatible devices illustration"
   },
+  "countrySelector": {
+    "local": {
+      "tab": "Local",
+      "countries": [
+        {
+          "key": "uk",
+          "name": "UK",
+          "flag": "https://flagcdn.com/w20/gb.png",
+          "description": "6:00",
+          "price": "US $10.00/GB"
+        },
+        {
+          "key": "switzerland",
+          "name": "Switzerland",
+          "flag": "https://flagcdn.com/w20/ch.png",
+          "description": "7:00",
+          "price": "US $12.00/GB"
+        },
+        {
+          "key": "portugal",
+          "name": "Portugal",
+          "flag": "https://flagcdn.com/w20/pt.png",
+          "description": "5:00",
+          "price": "US $11.50/GB"
+        },
+        {
+          "key": "italy",
+          "name": "Italy",
+          "flag": "https://flagcdn.com/w20/it.png",
+          "description": "6:30",
+          "price": "US $10.50/GB"
+        },
+        {
+          "key": "greece",
+          "name": "Greece",
+          "flag": "https://flagcdn.com/w20/gr.png",
+          "description": "5:30",
+          "price": "US $9.00/GB"
+        },
+        {
+          "key": "england",
+          "name": "England",
+          "flag": "https://flagcdn.com/w20/gb-eng.png",
+          "description": "6:15",
+          "price": "US $10.75/GB"
+        },
+        {
+          "key": "belarus",
+          "name": "Belarus",
+          "flag": "https://flagcdn.com/w20/by.png",
+          "description": "8:00",
+          "price": "US $11.25/GB"
+        },
+        {
+          "key": "belgium",
+          "name": "Belgium",
+          "flag": "https://flagcdn.com/w20/be.png",
+          "description": "7:30",
+          "price": "US $10.50/GB"
+        },
+        {
+          "key": "spain",
+          "name": "Spain",
+          "flag": "https://flagcdn.com/w20/es.png",
+          "description": "6:45",
+          "price": "US $9.75/GB"
+        },
+        {
+          "key": "france",
+          "name": "France",
+          "flag": "https://flagcdn.com/w20/fr.png",
+          "description": "6:00",
+          "price": "US $12.25/GB"
+        },
+        {
+          "key": "germany",
+          "name": "Germany",
+          "flag": "https://flagcdn.com/w20/de.png",
+          "description": "7:30",
+          "price": "US $11.50/GB"
+        },
+        {
+          "key": "netherlands",
+          "name": "Netherlands",
+          "flag": "https://flagcdn.com/w20/nl.png",
+          "description": "6:15",
+          "price": "US $10.25/GB"
+        },
+        {
+          "key": "sweden",
+          "name": "Sweden",
+          "flag": "https://flagcdn.com/w20/se.png",
+          "description": "7:45",
+          "price": "US $12.00/GB"
+        },
+        {
+          "key": "norway",
+          "name": "Norway",
+          "flag": "https://flagcdn.com/w20/no.png",
+          "description": "8:30",
+          "price": "US $11.75/GB"
+        },
+        {
+          "key": "denmark",
+          "name": "Denmark",
+          "flag": "https://flagcdn.com/w20/dk.png",
+          "description": "7:00",
+          "price": "US $10.75/GB"
+        },
+        {
+          "key": "finland",
+          "name": "Finland",
+          "flag": "https://flagcdn.com/w20/fi.png",
+          "description": "8:00",
+          "price": "US $11.25/GB"
+        },
+        {
+          "key": "ireland",
+          "name": "Ireland",
+          "flag": "https://flagcdn.com/w20/ie.png",
+          "description": "6:45",
+          "price": "US $10.50/GB"
+        },
+        {
+          "key": "austria",
+          "name": "Austria",
+          "flag": "https://flagcdn.com/w20/at.png",
+          "description": "7:15",
+          "price": "US $9.50/GB"
+        },
+        {
+          "key": "poland",
+          "name": "Poland",
+          "flag": "https://flagcdn.com/w20/pl.png",
+          "description": "7:30",
+          "price": "US $11.00/GB"
+        },
+        {
+          "key": "czech-republic",
+          "name": "Czech Republic",
+          "flag": "https://flagcdn.com/w20/cz.png",
+          "description": "7:00",
+          "price": "US $10.75/GB"
+        }
+      ]
+    },
+    "regional": {
+      "tab": "Regional",
+      "regions": [
+        {
+          "key": "south-america",
+          "name": "South America",
+          "flag": "southAmericaImage",
+          "description": "18 countries",
+          "price": "US $14.00/GB"
+        },
+        {
+          "key": "north-america",
+          "name": "North America",
+          "flag": "northAmericaImage",
+          "description": "23 countries",
+          "price": "US $15.50/GB"
+        },
+        {
+          "key": "africa",
+          "name": "Africa",
+          "flag": "africaImage",
+          "description": "54 countries",
+          "price": "US $13.00/GB"
+        },
+        {
+          "key": "europe",
+          "name": "Europe",
+          "flag": "europaImage",
+          "description": "44 countries",
+          "price": "US $16.00/GB"
+        },
+        {
+          "key": "asia",
+          "name": "Asia",
+          "flag": "asiaImage",
+          "description": "48 countries",
+          "price": "US $14.50/GB"
+        }
+      ]
+    },
+    "global": {
+      "tab": "Global",
+      "plans": [
+        {
+          "key": "global",
+          "name": "Global",
+          "flag": "globalImage",
+          "description": "136 countries",
+          "price": "US $18.00/GB"
+        }
+      ]
+    }
+  },
+  "countryDetails": {
+    "destination": "Destination",
+    "notFound": "Country not found",
+    "features": [
+      { "title": "Digital sim-card", "text": "Easy top-up" },
+      { "title": "Data plans", "text": "Pay lower costs for our data plans" },
+      { "title": "Expire date", "text": "12 Months after activate" }
+    ],
+    "appStore": "App Store",
+    "playStore": "Play Store"
+  },
+  "countryFAQ": {
+    "items": [
+      {
+        "question": "Features",
+        "answer": "An eSIM for United States allows you to connect to the Internet at this destination in minutes. Enjoy unlimited data at 3G/4G/LTE speed. Forget about roaming or searching for SIM cards at airports; you receive the eSIM immediately after purchase. Use your favorite apps to call all your friends and family, such as WhatsApp or iMessage, without restrictions. You can still keep your domestic SIM card on your cellphone if you want to use it for SMS or calls. To activate it, you just need to follow the instructions we send to your email."
+      },
+      {
+        "question": "Description",
+        "answer": "FutureConnect offers hassle-free mobile connectivity through innovative eSIM technology. Our digital SIM cards provide instant activation, global coverage, and flexible plans without the need for physical SIM cards. Whether you're a frequent traveler, a remote worker, or simply looking for a more convenient mobile experience, FutureConnect delivers reliable, secure, and eco-friendly cellular service. Experience the future of mobile connectivity with our easy-to-use app and compatible devices."
+      },
+      {
+        "question": "Technical Speech",
+        "answer": "An eSIM for United States allows you to connect to the Internet at this destination in minutes. Enjoy unlimited data at 3G/4G/LTE speed. Forget about roaming or searching for SIM cards at airports; you receive the eSIM immediately after purchase. Use your favorite apps to call all your friends and family, such as WhatsApp or iMessage, without restrictions. You can still keep your domestic SIM card on your cellphone if you want to use it for SMS or calls. To activate it, you just need to follow the instructions we send to your email."
+      }
+    ]
+  },
   "values": {
     "title": "OUR VALUES",
     "heading": "How We Work",
