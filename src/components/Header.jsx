@@ -1,13 +1,11 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom'; // Use NavLink instead of Link
+import { NavLink } from 'react-router-dom';
 import { Button } from './Button';
 import LanguageSwitcher from './LanguageSwitcher';
-
 import { useTranslation } from 'react-i18next';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const { t } = useTranslation();
 
   const toggleMenu = () => {
@@ -24,7 +22,7 @@ export const Header = () => {
           className="h-10"
         />
       </NavLink>
-      <LanguageSwitcher />
+
       {/* Burger Menu (visible below 800px) */}
       <button
         className="md:hidden z-20 focus:outline-none flex-shrink-0 cursor-pointer"
@@ -52,7 +50,7 @@ export const Header = () => {
         </div>
       </button>
 
-      {/* Desktop Navigation (hidden below 800px unless menu is open) */}
+      {/* Desktop Navigation (hidden below 800px) */}
       <div className="hidden md:flex md:flex-row md:items-center md:static md:bg-transparent md:shadow-none md:py-0 md:flex-1 md:justify-center">
         <ul className="flex flex-col md:flex-row md:space-x-6 text-gray-500 text-sm font-medium leading-5 tracking-[0px] space-y-4 md:space-y-0 text-center">
           <li>
@@ -110,8 +108,9 @@ export const Header = () => {
         </ul>
       </div>
 
-      {/* Desktop Button */}
-      <div className="hidden md:block md:flex-shrink-0">
+      {/* Desktop Right Section (Button + LanguageSwitcher) */}
+      <div className="hidden md:flex md:items-center md:gap-4 md:flex-shrink-0">
+        <LanguageSwitcher />
         <Button animated size="md" onClick={() => setIsOpen(false)}>
           <p className="flex items-center justify-center gap-2">
             {t('buttons.getTheApp')}
@@ -122,7 +121,7 @@ export const Header = () => {
         </Button>
       </div>
 
-      {/* Mobile Menu (only visible when isOpen is true) */}
+      {/* Mobile Menu (visible when isOpen is true) */}
       {isOpen && (
         <div className="z-50 flex flex-col items-center absolute top-16 left-0 right-0 w-full bg-white shadow-md py-4 md:hidden">
           <ul className="flex flex-col space-y-4 text-gray-500 text-sm font-medium leading-5 tracking-[0px] text-center">
@@ -179,7 +178,8 @@ export const Header = () => {
               </NavLink>
             </li>
           </ul>
-          <div className="mt-4">
+          <div className="mt-4 flex flex-col items-center gap-4">
+            <LanguageSwitcher />
             <Button animated size="md" onClick={() => setIsOpen(false)}>
               <p className="flex items-center justify-center gap-2">
                 {t('buttons.getTheApp')}

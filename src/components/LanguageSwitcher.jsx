@@ -14,26 +14,87 @@ const LanguageSwitcher = () => {
     });
   };
 
-  return (
-    <Select
-      key={refreshKey}
-      defaultValue={
-        languageOptions.find((option) => option.value === i18n.language) ||
-        languageOptions[0]
-      }
-      onChange={handleChange}
-      classNames={{
-        indicatorSeparator: () => 'hidden',
-        input: () => 'dark:text-gray-100',
-        singleValue: () => 'dark:text-gray-800',
-        option: () => 'hover:!text-gray-800',
-        menu: () =>
-          'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-100',
-        control: () =>
-          'flex items-center justify-between rounded-md border-none pl-2 pr-1 shadow',
+  // Custom styles for react-select
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      backgroundColor: '#F6F8FA',
+      border: '1px solid #e5e7eb',
+      borderRadius: '8px',
+      padding: '2px 8px',
+      boxShadow: '0 2px 4px rgba(0, 0, 0, 0.05)',
+      cursor: 'pointer',
+      transition: 'border-color 0.3s ease, box-shadow 0.3s ease',
+      '&:hover': {
+        borderColor: '#cb460e',
+        boxShadow: '0 4px 8px rgba(203, 70, 14, 0.2)',
+      },
+    }),
+    singleValue: (provided) => ({
+      ...provided,
+      color: '#4f4f4f',
+      fontWeight: '500',
+    }),
+    option: (provided, state) => ({
+      ...provided,
+      backgroundColor: state.isSelected ? '#cb460e' : '#fff',
+      color: state.isSelected ? '#fff' : '#4f4f4f',
+      padding: '10px 12px',
+      cursor: 'pointer',
+      transition: 'background-color 0.2s ease, color 0.2s ease',
+      '&:hover': {
+        backgroundColor: state.isSelected ? '#cb460e' : '#f6e9e5',
+        color: state.isSelected ? '#fff' : '#cb460e',
+      },
+    }),
+    menu: (provided) => ({
+      ...provided,
+      backgroundColor: '#fff',
+      borderRadius: '8px',
+      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+      marginTop: '4px',
+      animation: 'dropdownFadeIn 0.3s ease-in-out',
+      zIndex: 50,
+    }),
+    indicatorSeparator: () => ({
+      display: 'none',
+    }),
+    dropdownIndicator: (provided) => ({
+      ...provided,
+      color: '#cb460e',
+      transition: 'transform 0.3s ease',
+      '&:hover': {
+        color: '#a33a0b',
+      },
+    }),
+  };
+
+  // Custom DropdownIndicator component
+  const DropdownIndicator = ({ selectProps }) => (
+    <div
+      className="transition-transform duration-300"
+      style={{
+        transform: selectProps.menuIsOpen ? 'rotate(180deg)' : 'rotate(0deg)',
       }}
-      options={languageOptions}
-    />
+    >
+      <ion-icon name="chevron-down-outline" size="small" />
+    </div>
+  );
+
+  return (
+    <div className="relative w-40">
+      <Select
+        key={refreshKey}
+        defaultValue={
+          languageOptions.find((option) => option.value === i18n.language) ||
+          languageOptions[0]
+        }
+        onChange={handleChange}
+        options={languageOptions}
+        styles={customStyles}
+        components={{ DropdownIndicator }} // Pass the custom component
+      />
+    </div>
   );
 };
 
