@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import italyImage from '../assets/italy.jpg';
 import trImage from '../assets/tr.jpg';
 import ukImage from '../assets/uk.jpg';
@@ -6,23 +7,23 @@ import ukImage from '../assets/uk.jpg';
 // Country data with imported images and shadow colors
 const slideshowData = [
   {
-    name: 'Turkey',
+    key: 'turkey', // Translation key
     flag: 'https://flagcdn.com/w20/tr.png',
-    price: '$4/GB',
+    priceKey: 'turkeyPrice', // Translation key for price
     image: trImage,
     shadowColor: '#c4e9cd', // Near green
   },
   {
-    name: 'UK',
+    key: 'uk',
     flag: 'https://flagcdn.com/w20/gb.png',
-    price: '$5/GB',
+    priceKey: 'ukPrice',
     image: ukImage,
     shadowColor: '#bbcfe3', // Blue
   },
   {
-    name: 'Italy',
+    key: 'italy',
     flag: 'https://flagcdn.com/w20/it.png',
-    price: '$6/GB',
+    priceKey: 'italyPrice',
     image: italyImage,
     shadowColor: '#f5daba', // Orange
   },
@@ -30,6 +31,7 @@ const slideshowData = [
 
 export const PhoneSlideshow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { t } = useTranslation(); // Hook for translations
 
   // Cycle through images every 2 seconds
   useEffect(() => {
@@ -67,7 +69,7 @@ export const PhoneSlideshow = () => {
             <img
               key={index}
               src={country.image}
-              alt={`${country.name} landscape`}
+              alt={t(`slideshow.${country.key}.alt`)} // Translated alt text
               className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-500 ${
                 index === currentIndex ? 'opacity-100' : 'opacity-0'
               }`}
@@ -89,14 +91,15 @@ export const PhoneSlideshow = () => {
         >
           <img
             src={slideshowData[leftIndex].flag}
-            alt={`${slideshowData[leftIndex].name} flag`}
+            alt={t(`slideshow.${slideshowData[leftIndex].key}.flagAlt`)}
             className="w-5 h-5 object-cover rounded-full mb-1"
           />
           <h3 className="text-sm font-medium text-black">
-            {slideshowData[leftIndex].name}
+            {t(`slideshow.${slideshowData[leftIndex].key}.name`)}
           </h3>
           <p className="text-xs text-gray-500">
-            From {slideshowData[leftIndex].price}
+            {t('slideshow.from')}{' '}
+            {t(`slideshow.${slideshowData[leftIndex].priceKey}`)}
           </p>
         </div>
 
@@ -113,14 +116,15 @@ export const PhoneSlideshow = () => {
         >
           <img
             src={slideshowData[centerIndex].flag}
-            alt={`${slideshowData[centerIndex].name} flag`}
+            alt={t(`slideshow.${slideshowData[centerIndex].key}.flagAlt`)}
             className="w-5 h-5 object-cover rounded-full mb-1"
           />
           <h3 className="text-sm font-medium text-black">
-            {slideshowData[centerIndex].name}
+            {t(`slideshow.${slideshowData[centerIndex].key}.name`)}
           </h3>
           <p className="text-xs text-gray-500">
-            From {slideshowData[centerIndex].price}
+            {t('slideshow.from')}{' '}
+            {t(`slideshow.${slideshowData[centerIndex].priceKey}`)}
           </p>
         </div>
 
@@ -137,14 +141,15 @@ export const PhoneSlideshow = () => {
         >
           <img
             src={slideshowData[rightIndex].flag}
-            alt={`${slideshowData[rightIndex].name} flag`}
+            alt={t(`slideshow.${slideshowData[rightIndex].key}.flagAlt`)}
             className="w-5 h-5 object-cover rounded-full mb-1"
           />
           <h3 className="text-sm font-medium text-black">
-            {slideshowData[rightIndex].name}
+            {t(`slideshow.${slideshowData[rightIndex].key}.name`)}
           </h3>
           <p className="text-xs text-gray-500">
-            From {slideshowData[rightIndex].price}
+            {t('slideshow.from')}{' '}
+            {t(`slideshow.${slideshowData[rightIndex].priceKey}`)}
           </p>
         </div>
       </div>

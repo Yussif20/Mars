@@ -11,10 +11,31 @@
     "getTheApp": "Get the App"
   },
   "hero": {
-    "title": "Stay connected affordably\nwherever you roam.",
+    "title": "Stay connected affordably \n wherever you roam.",
     "subtitle": "Experience reliable connectivity at economical rates, wherever you travel.",
     "appStore": "App Store",
     "playStore": "Play Store"
+  },
+  "slideshow": {
+    "from": "From",
+    "turkey": {
+      "name": "Turkey",
+      "alt": "Turkey landscape",
+      "flagAlt": "Turkey flag"
+    },
+    "turkeyPrice": "$4/GB",
+    "uk": {
+      "name": "UK",
+      "alt": "UK landscape",
+      "flagAlt": "UK flag"
+    },
+    "ukPrice": "$5/GB",
+    "italy": {
+      "name": "Italy",
+      "alt": "Italy landscape",
+      "flagAlt": "Italy flag"
+    },
+    "italyPrice": "$6/GB"
   },
   "CompatibleDevices": {
     "sectionTitle": "COMPATIBLE DEVICES",
@@ -22,6 +43,35 @@
     "description": "Refer to the list below to see if your device supports eSIM technology.",
     "buttonText": "Check Now",
     "imageAlt": "Compatible devices illustration"
+  },
+  "values": {
+    "title": "OUR VALUES",
+    "heading": "How We Work",
+    "subheading": "Embody the essence of who we are and what we stand for",
+    "innovation": {
+      "name": "Innovation",
+      "title": "Diversity",
+      "text": "By valuing and integrating a multitude of diverse perspectives within our team, we actively cultivate an environment where creativity flourishes and excellence becomes the standard",
+      "alt": "Innovation image"
+    },
+    "trustworthy": {
+      "name": "Trustworthy",
+      "title": "Trustworthy",
+      "text": "Honesty and transparency serve as the pillars of our organization, guiding our actions and communications as we prioritize integrity and openness in every endeavor we undertake",
+      "alt": "Trustworthy image"
+    },
+    "empowerment": {
+      "name": "Empowerment",
+      "title": "Empowerment",
+      "text": "Our mission is to provide users with the empowerment and autonomy to shape their digital experiences according to their preferences and needs, enabling to take control",
+      "alt": "Empowerment image"
+    },
+    "collaboration": {
+      "name": "Collaboration",
+      "title": "Stronger Together",
+      "text": "We believe in the transformative power of teamwork and cooperation to drive us towards our shared goals, cultivating an environment where mutual support are paramount",
+      "alt": "Collaboration image"
+    }
   },
   "buttons": {
     "getTheApp": "Get the App",
