@@ -81,10 +81,64 @@
     "sendMessage": "Send Message"
   },
   "devices": {
-    "apple": "Apple",
-    "samsung": "Samsung",
-    "googlePixel": "Google Pixel",
-    "other": "Other"
+    "apple": {
+      "name": "Apple",
+      "list": [
+        "iPhone 15, 15 Plus, 15 Pro, 15 Pro Max",
+        "iPhone 14, 14 Plus, 14 Pro, 14 Pro Max",
+        "iPhone 13, 13 Mini, 13 Pro, 13 Pro Max, SE 3 (2022)",
+        "iPhone 12, 12 Mini, 12 Pro, 12 Pro Max",
+        "iPhone 11, 11 Pro, 11 Pro Max",
+        "Apple Watch SE",
+        "iPhone XS, XS Max, XR",
+        "iPhone SE (2020, 2022)",
+        "iPad Pro 11-inch (1st, 2nd and 3rd generation)",
+        "iPad Pro 12.9-inch (3rd, 4th and 5th generation)",
+        "iPad (7th, 8th and 9th generation)",
+        "iPad Mini (5th and 6th generation)",
+        "Apple Watch Series 3, 4, 5 and 6"
+      ]
+    },
+    "samsung": {
+      "name": "Samsung",
+      "list": [
+        "Galaxy S23, S23+, S23 Ultra",
+        "Galaxy S22, S22+ 5G, S22 Ultra 5G",
+        "Galaxy S21, S21+ 5G, S21 Ultra 5G",
+        "Galaxy S20, S20+, S20 Ultra",
+        "Galaxy Z Flip, Flip 3, 4, 5",
+        "Galaxy Note 20, 20+, 20 Ultra",
+        "Galaxy Fold, Fold 2, 3, 4, 5",
+        "Galaxy Watch"
+      ]
+    },
+    "googlePixel": {
+      "name": "Google Pixel",
+      "list": [
+        "Google Pixel 7, 7 Pro",
+        "Google Pixel 6, 6a, 6 Pro",
+        "Google Pixel 5",
+        "Google Pixel 3, 3 XL",
+        "Google Pixel 3a, 3a XL",
+        "Google Pixel 4, 4a, 4 XL"
+      ]
+    },
+    "other": {
+      "name": "Other",
+      "list": [
+        "Huawei P40, P40 Pro",
+        "Honor Magic 4 Pro",
+        "Motorola Razr (2019), Razr 5G",
+        "Oppo Find X5, X5 Pro, X3 Pro",
+        "Fairphone",
+        "Nuu Mobile X5",
+        "Sony Xperia 10 III Lite",
+        "Huawei Mate 40 Pro",
+        "Sony Xperia 10 IV",
+        "Microsoft Surface Duo",
+        "Oppo Reno 5A, Reno 6 Pro 5G"
+      ]
+    }
   },
   "faq": {
     "title": "FAQ",
