@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const CountryCard = ({ country }) => {
+  const { t } = useTranslation();
+
   return (
     <Link
       to={`/country/${country.key}`}
@@ -13,7 +16,7 @@ const CountryCard = ({ country }) => {
       />
       <h3 className="text-lg font-medium text-black">{country.name}</h3>
       <p className="text-sm text-[#4f4f4f] mt-1">
-        From{' '}
+        {t('from')}
         <span className="bg-[#F6F8FA] ml-2 p-1 rounded-[6px]">
           {country.description}
         </span>

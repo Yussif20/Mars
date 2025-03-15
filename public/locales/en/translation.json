@@ -583,5 +583,6 @@
     "name": "Global",
     "desc": "136 countries",
     "price": "US $18.00/GB"
-  }
+  },
+  "from": "From"
 }
