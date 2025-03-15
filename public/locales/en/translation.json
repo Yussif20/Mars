@@ -16,34 +16,6 @@
     "appStore": "App Store",
     "playStore": "Play Store"
   },
-  "features": {
-    "heading": "Features",
-    "subheading": "Why Mars eSIM?",
-    "feature1": {
-      "title": "24/7 Support",
-      "description": "Our support team is available every day across all time zones"
-    },
-    "feature2": {
-      "title": "You can install your eSIM",
-      "description": "You have 90 days to start using your plan. But once you activate it on your phone and register on a network, your plan’s allocated duration begins."
-    },
-    "feature3": {
-      "title": "Privacy and Transparent",
-      "description": "Enhance privacy in all your daily communications with our innovative solutions, ensuring your peace of mind and confidentiality."
-    },
-    "feature4": {
-      "title": "Get the App",
-      "description": "Enhance privacy in all your daily communications with our innovative solutions"
-    },
-    "feature5": {
-      "title": "Payment Methods",
-      "description": "The Mars eSim gives you a variety of payment methods"
-    },
-    "feature6": {
-      "title": "Global Coverage",
-      "description": "Stay linked across 200+ countries and regions worldwide, ensuring connectivity wherever your travels take you"
-    }
-  },
   "CompatibleDevices": {
     "sectionTitle": "COMPATIBLE DEVICES",
     "heading": "Check the compatibility of your device",
@@ -151,6 +123,46 @@
       "emailPlaceholder": "your@email.com",
       "messagePlaceholder": "Your message...",
       "successMessage": "Thanks! We will be in touch soon."
+    }
+  },
+  "features": {
+    "title": "FEATURES",
+    "heading": "Why Mars eSIM?",
+    "support": {
+      "alt": "Support Icon",
+      "title": "24/7 Support",
+      "description": "Our support team is available every day across all time zones"
+    },
+    "install1": {
+      "alt": "eSIM Install Icon",
+      "title": "You can install your eSIM",
+      "description": "You have 90 days to start using your plan. But once you activate it on your phone and register on a network, your plan’s allocated duration begins."
+    },
+    "privacy": {
+      "alt": "Privacy Icon",
+      "title": "Privacy and Transparent",
+      "description": "Enhance privacy in all your daily communications with our innovative solutions, ensuring your peace of mind and confidentiality."
+    },
+    "getApp": {
+      "title": "Get the App",
+      "description": "Enhance privacy in all your daily communications with our innovative solutions",
+      "appStore": "App Store",
+      "playStore": "Play Store"
+    },
+    "payment": {
+      "alt": "Payment Icon",
+      "title": "Payment Methods",
+      "description": "The Mars eSim gives you a variety of payment methods"
+    },
+    "coverage": {
+      "alt": "Global Coverage Icon",
+      "title": "Global Coverage",
+      "description": "Stay linked across 200+ countries and regions worldwide, ensuring connectivity wherever your travels take you"
+    },
+    "install2": {
+      "alt": "eSIM Install Icon",
+      "title": "You can install your eSIM",
+      "description": "You have 90 days to start using your plan. But once you activate it on your phone and register on a network, your plan’s allocated duration begins."
     }
   },
   "footer": {
